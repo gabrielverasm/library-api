@@ -103,7 +103,7 @@ public class BookControllerTest {
 		// cenario (given)
 		Long id = 1l;
 
-		Object book = Book.builder().id(id).title(createNewBook().getTitle()).author(createNewBook().getAuthor())
+		Book book = Book.builder().id(id).title(createNewBook().getTitle()).author(createNewBook().getAuthor())
 				.isbn(createNewBook().getIsbn()).build();
 		BDDMockito.given(service.getById(id)).willReturn(Optional.of(book));
 
